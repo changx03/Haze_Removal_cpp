@@ -2,7 +2,20 @@
 
 ## Introduction
 
-This is an simple implemention of "single image haze removal using dark channel prior" by kaiming He, who wins the CVPR09 best paper.
+Implementing:
+
+```
+@article{he2010single,
+  title={Single image haze removal using dark channel prior},
+  author={He, Kaiming and Sun, Jian and Tang, Xiaoou},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={33},
+  number={12},
+  pages={2341--2353},
+  year={2010},
+  publisher={IEEE}
+}
+```
 
 ## Parameters by default
 - radius=7
@@ -13,8 +26,8 @@ This is an simple implemention of "single image haze removal using dark channel 
 
 ## Dependencies
 
-- opencv>=2.4
-- g++ (Visual Studio is also fine, but I will not show how to configure VS project here)
+- `OpenCV=4.5.4`
+- Build with CMake
 
 ## Compile
 
@@ -23,14 +36,6 @@ cd cpp_code/src
 g++ main.cpp hazeremoval.cpp guidedfilter.cpp -o ../dehaze `pkg-config --libs --cflags opencv`
 ```
 
-## Run
-
-Before running, you should check whether your LD_LIBRARY_PATH containing your opencv lib path!
-
-```bash
-cd ..
-./dehaze [your image path]
-```
 
 
 ## DEMO
@@ -40,13 +45,3 @@ cd ..
     <img src="demo/canon3_rev.jpg">
 </figure>
 
-<figure class="half">
-    <img src="demo/22.jpg">
-    <img src="demo/22_rev.jpg">
-</figure>
-
-
-## References
-
-- paper: Single Image Haze Removal using Dark Channel Prior
-- paper: Guided Image Fltering
